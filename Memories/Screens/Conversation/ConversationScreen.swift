@@ -65,6 +65,7 @@ private extension ConversationScreen {
           newMessage = ""
         }) {
           Text("Send")
+            .label()
         }
         .padding()
       }
@@ -136,6 +137,7 @@ private extension MessageView {
         .background(backgroundView)
         .foregroundColor(.white)
         .cornerRadius(8)
+        .label()
     case .image(let url):
       AsyncImage(url: url)
     }

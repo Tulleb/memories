@@ -36,6 +36,7 @@ struct AsyncContentView<
     case let .failed(error):
       Text(error.localizedDescription)
         .foregroundStyle(.red)
+        .label()
     case let .loaded(output):
       contentView(output)
     }

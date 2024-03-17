@@ -54,7 +54,7 @@ private extension MemoriesScreen {
 
   var friendView: some View {
     Text("Your memories with \(model.friend.firstName)")
-      .font(.title)
+      .subtitle()
   }
 
   var memoriesView: some View {

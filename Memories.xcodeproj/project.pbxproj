@@ -27,6 +27,9 @@
 		2E81643B2BA72F7400D475F7 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81643A2BA72F7400D475F7 /* Conversation.swift */; };
 		2E81643D2BA7315C00D475F7 /* ConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81643C2BA7315C00D475F7 /* ConversationScreen.swift */; };
 		2E81643F2BA7318A00D475F7 /* ConversationScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81643E2BA7318A00D475F7 /* ConversationScreenModel.swift */; };
+		2EA24FD02BA73D5B00FF2848 /* Gluten-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EA24FCD2BA73D5B00FF2848 /* Gluten-Bold.ttf */; };
+		2EA24FD12BA73D5B00FF2848 /* Gluten-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EA24FCE2BA73D5B00FF2848 /* Gluten-Black.ttf */; };
+		2EA24FD22BA73D5B00FF2848 /* Gluten-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EA24FCF2BA73D5B00FF2848 /* Gluten-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,10 @@
 		2E81643A2BA72F7400D475F7 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		2E81643C2BA7315C00D475F7 /* ConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationScreen.swift; sourceTree = "<group>"; };
 		2E81643E2BA7318A00D475F7 /* ConversationScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationScreenModel.swift; sourceTree = "<group>"; };
+		2EA24FCD2BA73D5B00FF2848 /* Gluten-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gluten-Bold.ttf"; sourceTree = "<group>"; };
+		2EA24FCE2BA73D5B00FF2848 /* Gluten-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gluten-Black.ttf"; sourceTree = "<group>"; };
+		2EA24FCF2BA73D5B00FF2848 /* Gluten-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gluten-Regular.ttf"; sourceTree = "<group>"; };
+		2EA24FD32BA73D7400FF2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +93,8 @@
 		14374FB02B989FD500131332 /* Memories */ = {
 			isa = PBXGroup;
 			children = (
+				2EA24FD32BA73D7400FF2848 /* Info.plist */,
+				2EA24FCB2BA73D3800FF2848 /* Assets */,
 				2E72E32F2BA68C2A00A6D4CC /* Extensions */,
 				2E72E3282BA683C300A6D4CC /* Components */,
 				2E72E3182BA6778D00A6D4CC /* Dependencies */,
@@ -93,7 +102,6 @@
 				2E72E3192BA6779500A6D4CC /* Screens */,
 				14374FB12B989FD500131332 /* MemoriesApp.swift */,
 				2E72E31F2BA67DA400A6D4CC /* MemoriesAppModel.swift */,
-				14374FB52B989FD700131332 /* Assets.xcassets */,
 				14374FB72B989FD700131332 /* Memories.entitlements */,
 			);
 			path = Memories;
@@ -175,6 +183,25 @@
 			path = Conversation;
 			sourceTree = "<group>";
 		};
+		2EA24FCB2BA73D3800FF2848 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				14374FB52B989FD700131332 /* Assets.xcassets */,
+				2EA24FCC2BA73D3C00FF2848 /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2EA24FCC2BA73D3C00FF2848 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2EA24FCE2BA73D5B00FF2848 /* Gluten-Black.ttf */,
+				2EA24FCD2BA73D5B00FF2848 /* Gluten-Bold.ttf */,
+				2EA24FCF2BA73D5B00FF2848 /* Gluten-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +260,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA24FD22BA73D5B00FF2848 /* Gluten-Regular.ttf in Resources */,
+				2EA24FD12BA73D5B00FF2848 /* Gluten-Black.ttf in Resources */,
+				2EA24FD02BA73D5B00FF2848 /* Gluten-Bold.ttf in Resources */,
 				14374FB62B989FD700131332 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +423,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Memories/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -428,6 +459,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Memories/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

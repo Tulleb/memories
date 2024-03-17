@@ -27,6 +27,7 @@ struct FriendsScreen: View {
               .resizable()
               .frame(size: 40)
             Text("Memories")
+              .title()
           }
         }
       }
@@ -38,10 +39,14 @@ struct FriendsScreen: View {
 
 private extension FriendsScreen {
   func contentView(for currentUser: CurrentUser) -> some View {
-    VStack(alignment: .leading) {
+    VStack(
+      alignment: .center,
+      spacing: 16
+    ) {
       welcomeText(for: currentUser)
       friendsView(for: currentUser)
     }
+    .padding()
   }
 
   func destinationView(for destination: FriendsScreenModel.Destination) -> some View {
@@ -55,8 +60,12 @@ private extension FriendsScreen {
   }
 
   func welcomeText(for currentUser: CurrentUser) -> some View {
-    Text("Welcome \(currentUser.firstName) 👋")
-      .font(.title)
+    VStack(spacing: 8) {
+      Text("Welcome \(currentUser.firstName) 👋")
+        .subtitle()
+      Text("Check your memories from...")
+        .label()
+    }
   }
 
   @ViewBuilder
@@ -81,6 +90,7 @@ private extension FriendsScreen {
       model.didTapFriend(user)
     } label: {
       Text(user.initials)
+        .label()
         .foregroundStyle(.white)
         .fontWeight(.bold)
         .padding()
