@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  GalleryScreen.swift
 //  Memories
 //
 //  Created by Michel-André Chirita on 06/03/2024.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-  @StateObject private var model = ContentViewModel()
+struct GalleryScreen: View {
+  @StateObject private var model = GalleryScreenModel()
 
   var body: some View {
     switch model.state {
@@ -22,7 +22,7 @@ struct ContentView: View {
 
 // MARK: - Private
 
-private extension ContentView {
+private extension GalleryScreen {
   var loadingView: some View {
     ProgressView()
   }
@@ -42,5 +42,5 @@ private extension ContentView {
 #Preview {
   @Provider var imagesProvider = UnsplashImageProvider() as ImagesDependency
 
-  return ContentView()
+  return GalleryScreen()
 }

@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  GalleryScreenModel.swift
 //  Memories
 //
 //  Created by Guillaume Bellut on 17/03/2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @MainActor
-final class ContentViewModel: ObservableObject {
+final class GalleryScreenModel: ObservableObject {
   enum State {
     case loading
     case loaded([URL])
@@ -23,7 +23,7 @@ final class ContentViewModel: ObservableObject {
 
 // MARK: - Private
 
-private extension ContentViewModel {
+private extension GalleryScreenModel {
   func load() {
     Task {
       @Inject var imagesProvider: ImagesDependency

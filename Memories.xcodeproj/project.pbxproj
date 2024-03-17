@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		14374FB22B989FD500131332 /* MemoriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB12B989FD500131332 /* MemoriesApp.swift */; };
-		14374FB42B989FD500131332 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB32B989FD500131332 /* ContentView.swift */; };
+		14374FB42B989FD500131332 /* GalleryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB32B989FD500131332 /* GalleryScreen.swift */; };
 		14374FB62B989FD700131332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14374FB52B989FD700131332 /* Assets.xcassets */; };
 		14374FDD2B98A02600131332 /* ImagesDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FDC2B98A02600131332 /* ImagesDependency.swift */; };
 		14E2F7362B9F6385007CCA2C /* ChatDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2F7352B9F6385007CCA2C /* ChatDependency.swift */; };
 		2E72E31C2BA67B2D00A6D4CC /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E31B2BA67B2D00A6D4CC /* DependencyManager.swift */; };
-		2E72E31E2BA67B8000A6D4CC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E31D2BA67B8000A6D4CC /* ContentViewModel.swift */; };
+		2E72E31E2BA67B8000A6D4CC /* GalleryScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E31D2BA67B8000A6D4CC /* GalleryScreenModel.swift */; };
 		2E72E3202BA67DA400A6D4CC /* MemoriesAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E31F2BA67DA400A6D4CC /* MemoriesAppModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14374FAE2B989FD500131332 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14374FB12B989FD500131332 /* MemoriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesApp.swift; sourceTree = "<group>"; };
-		14374FB32B989FD500131332 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		14374FB32B989FD500131332 /* GalleryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreen.swift; sourceTree = "<group>"; };
 		14374FB52B989FD700131332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14374FB72B989FD700131332 /* Memories.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memories.entitlements; sourceTree = "<group>"; };
 		14374FDC2B98A02600131332 /* ImagesDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDependency.swift; sourceTree = "<group>"; };
 		14C4BCC52B98A97F007B818F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		14E2F7352B9F6385007CCA2C /* ChatDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDependency.swift; sourceTree = "<group>"; };
 		2E72E31B2BA67B2D00A6D4CC /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
-		2E72E31D2BA67B8000A6D4CC /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		2E72E31D2BA67B8000A6D4CC /* GalleryScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreenModel.swift; sourceTree = "<group>"; };
 		2E72E31F2BA67DA400A6D4CC /* MemoriesAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesAppModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,8 +85,8 @@
 		2E72E3192BA6779500A6D4CC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				14374FB32B989FD500131332 /* ContentView.swift */,
-				2E72E31D2BA67B8000A6D4CC /* ContentViewModel.swift */,
+				14374FB32B989FD500131332 /* GalleryScreen.swift */,
+				2E72E31D2BA67B8000A6D4CC /* GalleryScreenModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -161,8 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E72E3202BA67DA400A6D4CC /* MemoriesAppModel.swift in Sources */,
-				14374FB42B989FD500131332 /* ContentView.swift in Sources */,
-				2E72E31E2BA67B8000A6D4CC /* ContentViewModel.swift in Sources */,
+				14374FB42B989FD500131332 /* GalleryScreen.swift in Sources */,
+				2E72E31E2BA67B8000A6D4CC /* GalleryScreenModel.swift in Sources */,
 				14E2F7362B9F6385007CCA2C /* ChatDependency.swift in Sources */,
 				2E72E31C2BA67B2D00A6D4CC /* DependencyManager.swift in Sources */,
 				14374FB22B989FD500131332 /* MemoriesApp.swift in Sources */,
