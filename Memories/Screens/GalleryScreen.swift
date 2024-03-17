@@ -11,23 +11,17 @@ struct GalleryScreen: View {
   @StateObject private var model = GalleryScreenModel()
 
   var body: some View {
-    switch model.state {
-    case .loading:
-      loadingView
-    case .loaded(let urls):
-      loadedView(with: urls)
-    }
+    AsyncContentView(
+      source: model,
+      contentView: contentView
+    )
   }
 }
 
 // MARK: - Private
 
 private extension GalleryScreen {
-  var loadingView: some View {
-    ProgressView()
-  }
-
-  func loadedView(with urls: [URL]) -> some View {
+  func contentView(with urls: [URL]) -> some View {
     ScrollView {
       VStack {
         ForEach(urls, id: \.self) { url in
@@ -39,8 +33,10 @@ private extension GalleryScreen {
   }
 }
 
+#if DEBUG
 #Preview {
   @Provider var imagesProvider = UnsplashImageProvider() as ImagesDependency
 
   return GalleryScreen()
 }
+#endif

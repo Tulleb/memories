@@ -11,7 +11,7 @@ protocol ImagesDependency {
   func fetchImageURLs() async throws -> [URL]
 }
 
-class UnsplashImageProvider: ImagesDependency {
+final class UnsplashImageProvider: ImagesDependency {
   private enum CustomError: Error {
     case parsingImagesURLError
     case parsingImageURLError

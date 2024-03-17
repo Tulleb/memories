@@ -21,6 +21,12 @@ private extension MemoriesAppModel {
   }
   
   func loadDependencies() {
+    #if DEBUG
+    @Provider var databaseProvider = MockDatabaseProvider() as DatabaseDependency
+    #else
+    @Provider var databaseProvider = FirestoreProvider() as DatabaseDependency
+    #endif
+
     @Provider var imagesProvider = UnsplashImageProvider() as ImagesDependency
   }
 }

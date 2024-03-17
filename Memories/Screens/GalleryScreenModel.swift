@@ -8,22 +8,13 @@
 import SwiftUI
 
 @MainActor
-final class GalleryScreenModel: ObservableObject {
-  enum State {
-    case loading
-    case loaded([URL])
-  }
-
-  @Published var state: State = .loading
+final class GalleryScreenModel: LoadableObject {
+  @Published var state: LoadingState<[URL]> = .idle
 
   init() {
     load()
   }
-}
 
-// MARK: - Private
-
-private extension GalleryScreenModel {
   func load() {
     Task {
       @Inject var imagesProvider: ImagesDependency
