@@ -44,8 +44,11 @@ private extension MemoriesScreen {
 
   func destinationView(for destination: MemoriesScreenModel.Destination) -> some View {
     switch destination {
-    case .conversation(let conversation):
-      ConversationScreen(conversation: conversation)
+    case let .conversation(memory, friend):
+      ConversationScreen(
+        memory: memory,
+        friend: friend
+      )
     }
   }
 
@@ -58,9 +61,17 @@ private extension MemoriesScreen {
     ScrollView {
       VStack {
         ForEach(model.memories) { memory in
-          AsyncImage(url: memory.imageURL)
+          memoryView(for: memory)
         }
       }
+    }
+  }
+
+  func memoryView(for memory: Memory) -> some View {
+    Button {
+      model.didTapMemory(memory)
+    } label: {
+      AsyncImage(url: memory.imageURL)
     }
   }
 }
@@ -77,24 +88,21 @@ private extension MemoriesScreen {
           friend: user,
           memories: memories
         )
-      }
-      .task {
-        @Inject var imagesProvider: ImagesDependency
-        let imagesURLs = try! await imagesProvider.fetchImageURLs()
-        self.memories = imagesURLs
-          .filter { _ in
-            Bool.random()
-          }
-          .map {
-            Memory(
-              id: UUID(),
-              imageURL: $0,
-              conversation: Conversation(
+        .task {
+          @Inject var imagesProvider: ImagesDependency
+          let imagesURLs = try! await imagesProvider.fetchImageURLs()
+          self.memories = imagesURLs
+            .filter { _ in
+              Bool.random()
+            }
+            .map {
+              Memory(
                 id: UUID(),
-                messages: []
+                imageURL: $0,
+                conversation: Conversation()
               )
-            )
-          }
+            }
+        }
       }
     }
   }

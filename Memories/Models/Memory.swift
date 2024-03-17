@@ -10,5 +10,15 @@ import Foundation
 struct Memory: Identifiable, Equatable, Hashable {
   let id: UUID
   let imageURL: URL
-  let conversation: Conversation
+  var conversation: Conversation
 }
+
+#if DEBUG
+extension Memory {
+  init() {
+    self.id = UUID()
+    self.imageURL = URL(string: "https://picsum.photos/1024/1024")!
+    self.conversation = Conversation()
+  }
+}
+#endif

@@ -88,10 +88,7 @@ extension CurrentUser {
           Memory(
             id: UUID(),
             imageURL: $0,
-            conversation: Conversation(
-              id: UUID(),
-              messages: []
-            )
+            conversation: Conversation()
           )
         }
       partialResult[friend] = memories

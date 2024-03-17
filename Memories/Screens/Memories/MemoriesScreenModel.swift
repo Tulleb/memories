@@ -10,7 +10,7 @@ import SwiftUI
 @MainActor
 final class MemoriesScreenModel: ObservableObject {
   enum Destination: Hashable {
-    case conversation(Conversation)
+    case conversation(Memory, User)
   }
 
   @Published var friend: User
@@ -26,6 +26,6 @@ final class MemoriesScreenModel: ObservableObject {
   }
 
   func didTapMemory(_ memory: Memory) {
-    self.destination = .conversation(memory.conversation)
+    self.destination = .conversation(memory, friend)
   }
 }

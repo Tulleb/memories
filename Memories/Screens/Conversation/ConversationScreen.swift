@@ -12,15 +12,23 @@ import SwiftUI
 struct ConversationScreen: View {
   @StateObject private var model: ConversationScreenModel
   @State private var newMessage: String = ""
+  @State private var backgroundBlurringOpacity = 1.0
 
-  init(conversation: Conversation) {
+  init(
+    memory: Memory,
+    friend: User
+  ) {
     self._model = StateObject(
-      wrappedValue: ConversationScreenModel(conversation: conversation)
+      wrappedValue: ConversationScreenModel(
+        memory: memory,
+        friend: friend
+      )
     )
   }
 
   var body: some View {
     contentView
+      .background(memoryBackgroundView)
   }
 }
 
@@ -30,11 +38,67 @@ private extension ConversationScreen {
   var contentView: some View {
     VStack(spacing: 4) {
       ScrollView {
-        ForEach(model.conversation.messages) { message in
+        GeometryReader { geometry in
+          Color.clear.preference(
+            key: ScrollOffsetKey.self,
+            value: geometry.frame(in: .named("scrollView")).minY
+          )
+        }
+        .frame(height: 0)
+
+        ForEach(model.memory.conversation.messages) { message in
           MessageView(message: message)
         }
       }
+      .coordinateSpace(name: "scrollView")
+      .onPreferenceChange(ScrollOffsetKey.self) { value in
+        updateBackgroundOpacity(with: value)
+      }
+
+      HStack {
+        TextField("Write a message...", text: $newMessage)
+          .textFieldStyle(RoundedBorderTextFieldStyle())
+          .padding()
+
+        Button(action: {
+          model.sendMessage(content: .text(newMessage))
+          newMessage = ""
+        }) {
+          Text("Send")
+        }
+        .padding()
+      }
+      .opacity(backgroundBlurringOpacity)
     }
+  }
+
+  var memoryBackgroundView: some View {
+    AsyncImage(url: model.memory.imageURL) { image in
+      image
+        .resizable()
+        .scaledToFit()
+        .overlay(
+          .thinMaterial
+            .opacity(backgroundBlurringOpacity)
+        )
+    } placeholder: {
+      ProgressView()
+    }
+    .ignoresSafeArea()
+  }
+
+  func updateBackgroundOpacity(with scrollOffset: CGFloat) {
+    let threshold: CGFloat = 100
+    let opacity = min(max(1 - ((-scrollOffset) / threshold), 0), 1)
+    self.backgroundBlurringOpacity = opacity
+  }
+}
+
+// Preference key to pass the scroll offset
+struct ScrollOffsetKey: PreferenceKey {
+  static var defaultValue: CGFloat = 0
+  static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+    value += nextValue()
   }
 }
 
@@ -85,7 +149,8 @@ private extension MessageView {
 #if DEBUG
 #Preview {
   ConversationScreen(
-    conversation: Conversation()
+    memory: Memory(),
+    friend: User()
   )
 }
 #endif

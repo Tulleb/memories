@@ -8,10 +8,15 @@
 import SwiftUI
 
 final class ConversationScreenModel: ObservableObject {
-  @Published var conversation: Conversation
+  @Published var memory: Memory
+  @Published var friend: User
 
-  init(conversation: Conversation) {
-    self.conversation = conversation
+  init(
+    memory: Memory,
+    friend: User
+  ) {
+    self.memory = memory
+    self.friend = friend
   }
 
   func sendMessage(content: Message.Content) {
@@ -19,6 +24,6 @@ final class ConversationScreenModel: ObservableObject {
       id: UUID(),
       content: content,
       isSender: true)
-    conversation.messages.append(newMessage)
+    memory.conversation.messages.append(newMessage)
   }
 }
