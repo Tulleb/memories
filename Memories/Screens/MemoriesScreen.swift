@@ -8,26 +8,35 @@
 import SwiftUI
 
 struct MemoriesScreen: View {
-  @StateObject private var model: MemoriesScreenModel
+  private let friend: User
+  private let memories: [Memory]
 
-  init(friend: User) {
-    self._model = StateObject(
-      wrappedValue: MemoriesScreenModel(friend: friend)
-    )
+  init(
+    friend: User,
+    memories: [Memory]
+  ) {
+    self.friend = friend
+    self.memories = memories
   }
 
   var body: some View {
-    AsyncContentView(
-      source: model,
-      contentView: contentView
-    )
+    VStack {
+      friendView
+      memoriesView
+    }
+    .padding()
   }
 }
 
 // MARK: - Private
 
 private extension MemoriesScreen {
-  func contentView(with memories: [Memory]) -> some View {
+  var friendView: some View {
+    Text("Your memories with \(friend.firstName)")
+      .font(.title)
+  }
+
+  var memoriesView: some View {
     ScrollView {
       VStack {
         ForEach(memories) { memory in
@@ -35,14 +44,39 @@ private extension MemoriesScreen {
         }
       }
     }
-    .padding()
   }
 }
 
 #if DEBUG
 #Preview {
-  Preview {
-    MemoriesScreen(friend: User())
+  struct AsyncPreview: View {
+    let user = User()
+    @State var memories = [Memory]()
+
+    var body: some View {
+      Preview {
+        MemoriesScreen(
+          friend: user,
+          memories: memories
+        )
+      }
+      .task {
+        @Inject var imagesProvider: ImagesDependency
+        let imagesURLs = try! await imagesProvider.fetchImageURLs()
+        self.memories = imagesURLs
+          .filter { _ in
+            Bool.random()
+          }
+          .map {
+            Memory(
+              id: UUID(),
+              imageURL: $0
+            )
+          }
+      }
+    }
   }
+
+  return AsyncPreview()
 }
 #endif

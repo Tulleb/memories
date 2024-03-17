@@ -17,60 +17,9 @@ struct User: Equatable, Identifiable, Hashable {
 struct CurrentUser: Equatable {
   let user: User
   let friends: [User]
+  let memories: [User: [Memory]]
 
   subscript<T>(dynamicMember keyPath: KeyPath<User, T>) -> T {
     user[keyPath: keyPath]
   }
 }
-
-#if DEBUG
-extension User {
-  static let randomNames: [String] = [
-    "Taylor",
-    "Jordan",
-    "Morgan",
-    "Ryan",
-    "Parker",
-    "Casey",
-    "Cameron",
-    "Kelly",
-    "Jamie",
-    "Alex",
-    "Bailey",
-    "Blair",
-    "Quinn",
-    "Peyton",
-    "Avery",
-    "Riley",
-    "Kennedy",
-    "Ellis",
-    "Harper",
-    "Carter",
-    "Lee",
-    "Reed",
-    "Brooks",
-    "Mackenzie",
-    "Sawyer",
-    "Kendall",
-    "Carson",
-    "Tyler",
-    "Spencer",
-    "Mason"
-  ]
-
-  init() {
-    self.id = UUID()
-    self.firstName = Self.randomNames.randomElement()!
-    self.lastName = Self.randomNames.randomElement()!
-  }
-}
-
-extension CurrentUser {
-  init() {
-    self.user = User()
-    self.friends = (0 ... 20).map { _ in
-      User()
-    }
-  }
-}
-#endif

@@ -36,8 +36,11 @@ private extension FriendsScreen {
 
   func destinationView(for destination: FriendsScreenModel.Destination) -> some View {
     switch destination {
-    case .memories(let friend):
-      MemoriesScreen(friend: friend)
+    case let .memories(friend, memories):
+      MemoriesScreen(
+        friend: friend,
+        memories: memories
+      )
     }
   }
 

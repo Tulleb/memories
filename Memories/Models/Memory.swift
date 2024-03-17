@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Memory: Identifiable, Equatable {
+struct Memory: Identifiable, Equatable, Hashable {
   let id: UUID
   let imageURL: URL
 }
