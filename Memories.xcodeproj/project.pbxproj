@@ -21,6 +21,7 @@
 		2E72E32A2BA683E400A6D4CC /* LoadableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E3292BA683E400A6D4CC /* LoadableObject.swift */; };
 		2E72E32C2BA6843400A6D4CC /* AsyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E32B2BA6843400A6D4CC /* AsyncContentView.swift */; };
 		2E72E32E2BA685A400A6D4CC /* FriendsScreenModel copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E32D2BA685A400A6D4CC /* FriendsScreenModel copy.swift */; };
+		2E72E3312BA68C3400A6D4CC /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E3302BA68C3400A6D4CC /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2E72E3292BA683E400A6D4CC /* LoadableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableObject.swift; sourceTree = "<group>"; };
 		2E72E32B2BA6843400A6D4CC /* AsyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncContentView.swift; sourceTree = "<group>"; };
 		2E72E32D2BA685A400A6D4CC /* FriendsScreenModel copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsScreenModel copy.swift"; sourceTree = "<group>"; };
+		2E72E3302BA68C3400A6D4CC /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		14374FB02B989FD500131332 /* Memories */ = {
 			isa = PBXGroup;
 			children = (
+				2E72E32F2BA68C2A00A6D4CC /* Extensions */,
 				2E72E3282BA683C300A6D4CC /* Components */,
 				2E72E3182BA6778D00A6D4CC /* Dependencies */,
 				2E72E3212BA67FCE00A6D4CC /* Models */,
@@ -123,6 +126,14 @@
 				2E72E32B2BA6843400A6D4CC /* AsyncContentView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		2E72E32F2BA68C2A00A6D4CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E72E3302BA68C3400A6D4CC /* View+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E72E3202BA67DA400A6D4CC /* MemoriesAppModel.swift in Sources */,
+				2E72E3312BA68C3400A6D4CC /* View+Extensions.swift in Sources */,
 				2E72E32C2BA6843400A6D4CC /* AsyncContentView.swift in Sources */,
 				14374FB42B989FD500131332 /* GalleryScreen.swift in Sources */,
 				2E72E3252BA6814A00A6D4CC /* DatabaseDependency.swift in Sources */,

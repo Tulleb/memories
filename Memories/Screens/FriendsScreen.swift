@@ -15,6 +15,10 @@ struct FriendsScreen: View {
       source: model,
       contentView: contentView
     )
+    .navigationDestination(
+      item: $model.destination,
+      destination: destinationView
+    )
   }
 }
 
@@ -22,8 +26,66 @@ struct FriendsScreen: View {
 
 private extension FriendsScreen {
   func contentView(for currentUser: CurrentUser) -> some View {
+    NavigationStack {
+      VStack(alignment: .leading) {
+        welcomeText(for: currentUser)
+        friendsView(for: currentUser)
+      }
+    }
+  }
+
+  func destinationView(for destination: FriendsScreenModel.Destination) -> some View {
+    switch destination {
+    case .memories(let user):
+      EmptyView()
+    }
+  }
+
+  func welcomeText(for currentUser: CurrentUser) -> some View {
     Text("Welcome \(currentUser.firstName) 👋")
       .font(.title)
+  }
+
+  @ViewBuilder
+  func friendsView(for currentUser: CurrentUser) -> some View {
+    let columns = [
+      GridItem(.flexible()),
+      GridItem(.flexible()),
+      GridItem(.flexible())
+    ]
+
+    ScrollView {
+      LazyVGrid(columns: columns) {
+        ForEach(currentUser.friends) { friend in
+          friendView(for: friend)
+        }
+      }
+    }
+  }
+
+  func friendView(for user: User) -> some View {
+    Button {
+      model.didTapFriend(user)
+    } label: {
+      Text(user.initials)
+        .foregroundStyle(.white)
+        .fontWeight(.bold)
+        .padding()
+        .frame(size: 64)
+        .background(
+          Circle()
+            .fill(Color.gray)
+        )
+    }
+  }
+}
+
+extension User {
+  var initials: String {
+    [
+      firstName.first?.description,
+      lastName.first?.description
+    ].compactMap { $0 }.joined()
   }
 }
 

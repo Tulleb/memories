@@ -13,7 +13,7 @@ struct MemoriesApp: App {
 
   var body: some Scene {
     WindowGroup {
-      GalleryScreen()
+      FriendsScreen()
     }
   }
 }

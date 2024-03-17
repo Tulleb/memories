@@ -9,7 +9,12 @@ import SwiftUI
 
 @MainActor
 final class FriendsScreenModel: LoadableObject {
+  enum Destination: Hashable {
+    case memories(User)
+  }
+
   @Published var state: LoadingState<CurrentUser> = .idle
+  @Published var destination: Destination?
 
   init() {
     load()
@@ -26,5 +31,9 @@ final class FriendsScreenModel: LoadableObject {
         self.state = .failed(error)
       }
     }
+  }
+
+  func didTapFriend(_ user: User) {
+    destination = .memories(user)
   }
 }
