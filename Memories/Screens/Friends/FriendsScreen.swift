@@ -30,6 +30,14 @@ struct FriendsScreen: View {
               .title()
           }
         }
+        ToolbarItem(placement: .bottomBar) {
+          Button {
+            // TODO: Implement sharing feature to create a new memory
+          } label: {
+            Text("Share")
+              .label()
+          }
+        }
       }
     }
   }
@@ -72,34 +80,97 @@ private extension FriendsScreen {
   func friendsView(for currentUser: CurrentUser) -> some View {
     let columns = [
       GridItem(.flexible()),
-      GridItem(.flexible()),
       GridItem(.flexible())
     ]
 
     ScrollView {
-      LazyVGrid(columns: columns) {
+      LazyVGrid(
+        columns: columns,
+        spacing: 24
+      ) {
         ForEach(currentUser.friends) { friend in
-          friendView(for: friend)
+          Button {
+            model.didTapFriend(friend)
+          } label: {
+            FriendView(
+              friend: friend,
+              memories: currentUser.memories[friend] ?? []
+            )
+          }
         }
       }
     }
   }
+}
 
-  func friendView(for user: User) -> some View {
-    Button {
-      model.didTapFriend(user)
-    } label: {
-      Text(user.initials)
+struct FriendView: View {
+  private let friend: User
+  private let memories: [Memory]
+
+  private let avatarSize: CGFloat = 80
+  private let memorySize: CGFloat = 40
+
+  init(
+    friend: User,
+    memories: [Memory]
+  ) {
+    self.friend = friend
+    self.memories = memories
+  }
+
+  var body: some View {
+    VStack(spacing: .zero) {
+      ZStack(alignment: .center) {
+        ForEach(Array(zip(memories.indices, memories)), id: \.0) { index, memory in
+          memoryView(for: memory, at: index)
+        }
+
+        Text(friend.initials)
+          .label()
+          .foregroundStyle(.white)
+          .fontWeight(.bold)
+          .frame(size: avatarSize)
+          .background(
+            Circle()
+              .fill(Color.gray)
+          )
+          .clipShape(Circle())
+          .overlay(Circle().stroke(Color.white, lineWidth: 2))
+      }
+      .frame(size: avatarSize + memorySize * 2)
+
+      Text(friend.firstName)
         .label()
-        .foregroundStyle(.white)
-        .fontWeight(.bold)
-        .padding()
-        .frame(size: 64)
-        .background(
-          Circle()
-            .fill(Color.gray)
-        )
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+  }
+}
+
+// MARK: - Private
+
+private extension FriendView {
+  func memoryView(
+    for memory: Memory,
+    at index: Int
+  ) -> some View {
+    // TODO: Fetch thumbnails URL here to increase performances
+    AsyncImage(url: memory.imageURL) { image in
+      image
+        .resizable()
+        .scaledToFill()
+    } placeholder: {
+      Color.gray
+    }
+    .frame(size: memorySize)
+    .clipShape(Circle())
+    .overlay(
+      Circle()
+        .stroke(Color.white, lineWidth: 1)
+    )
+    .position(
+      x: cos(CGFloat(index) / CGFloat(memories.count) * 2 * .pi) * ((avatarSize + memorySize) / 2) + avatarSize / 2 + memorySize,
+      y: sin(CGFloat(index) / CGFloat(memories.count) * 2 * .pi) * (avatarSize / 2) + avatarSize / 2 + memorySize
+    )
   }
 }
 
