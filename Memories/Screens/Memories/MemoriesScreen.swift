@@ -8,38 +8,56 @@
 import SwiftUI
 
 struct MemoriesScreen: View {
-  private let friend: User
-  private let memories: [Memory]
+  @StateObject private var model: MemoriesScreenModel
 
   init(
     friend: User,
     memories: [Memory]
   ) {
-    self.friend = friend
-    self.memories = memories
+    self._model = StateObject(
+      wrappedValue: MemoriesScreenModel(
+        friend: friend,
+        memories: memories
+      )
+    )
   }
 
   var body: some View {
-    VStack {
-      friendView
-      memoriesView
-    }
-    .padding()
+    contentView
+      .navigationDestination(
+        item: $model.destination,
+        destination: destinationView
+      )
   }
 }
 
 // MARK: - Private
 
 private extension MemoriesScreen {
+  var contentView: some View {
+    VStack {
+      friendView
+      memoriesView
+    }
+    .padding()
+  }
+
+  func destinationView(for destination: MemoriesScreenModel.Destination) -> some View {
+    switch destination {
+    case .conversation(let conversation):
+      ConversationScreen(conversation: conversation)
+    }
+  }
+
   var friendView: some View {
-    Text("Your memories with \(friend.firstName)")
+    Text("Your memories with \(model.friend.firstName)")
       .font(.title)
   }
 
   var memoriesView: some View {
     ScrollView {
       VStack {
-        ForEach(memories) { memory in
+        ForEach(model.memories) { memory in
           AsyncImage(url: memory.imageURL)
         }
       }
@@ -70,7 +88,11 @@ private extension MemoriesScreen {
           .map {
             Memory(
               id: UUID(),
-              imageURL: $0
+              imageURL: $0,
+              conversation: Conversation(
+                id: UUID(),
+                messages: []
+              )
             )
           }
       }

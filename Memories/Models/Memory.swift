@@ -10,4 +10,5 @@ import Foundation
 struct Memory: Identifiable, Equatable, Hashable {
   let id: UUID
   let imageURL: URL
+  let conversation: Conversation
 }
