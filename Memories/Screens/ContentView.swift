@@ -8,25 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
-  
-  var imageService = UnsplashImageProvider()
-  @State var images: [URL] = []
-  
+  @StateObject private var model = ContentViewModel()
+
   var body: some View {
+    switch model.state {
+    case .loading:
+      loadingView
+    case .loaded(let urls):
+      loadedView(with: urls)
+    }
+  }
+}
+
+// MARK: - Private
+
+private extension ContentView {
+  var loadingView: some View {
+    ProgressView()
+  }
+
+  func loadedView(with urls: [URL]) -> some View {
     ScrollView {
       VStack {
-        ForEach(images, id: \.self) { url in
+        ForEach(urls, id: \.self) { url in
           AsyncImage(url: url)
         }
       }
     }
     .padding()
-    .task {
-      images = try! await imageService.fetchImageURLs()
-    }
   }
 }
 
 #Preview {
-  ContentView()
+  @Provider var imagesProvider = UnsplashImageProvider() as ImagesDependency
+
+  return ContentView()
 }
