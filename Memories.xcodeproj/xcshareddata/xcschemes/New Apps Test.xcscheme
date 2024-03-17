@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14374FAD2B989FD500131332"
-               BuildableName = "New Apps Test.app"
-               BlueprintName = "New Apps Test"
-               ReferencedContainer = "container:New Apps Test.xcodeproj">
+               BuildableName = "Memories.app"
+               BlueprintName = "Memories"
+               ReferencedContainer = "container:Memories.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,9 +36,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14374FBE2B989FD700131332"
-               BuildableName = "New Apps TestTests.xctest"
-               BlueprintName = "New Apps TestTests"
-               ReferencedContainer = "container:New Apps Test.xcodeproj">
+               BuildableName = "MemoriesTests.xctest"
+               BlueprintName = "MemoriesTests"
+               ReferencedContainer = "container:Memories.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14374FC82B989FD700131332"
-               BuildableName = "New Apps TestUITests.xctest"
-               BlueprintName = "New Apps TestUITests"
-               ReferencedContainer = "container:New Apps Test.xcodeproj">
+               BuildableName = "MemoriesUITests.xctest"
+               BlueprintName = "MemoriesUITests"
+               ReferencedContainer = "container:Memories.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14374FAD2B989FD500131332"
-            BuildableName = "New Apps Test.app"
-            BlueprintName = "New Apps Test"
-            ReferencedContainer = "container:New Apps Test.xcodeproj">
+            BuildableName = "Memories.app"
+            BlueprintName = "Memories"
+            ReferencedContainer = "container:Memories.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14374FAD2B989FD500131332"
-            BuildableName = "New Apps Test.app"
-            BlueprintName = "New Apps Test"
-            ReferencedContainer = "container:New Apps Test.xcodeproj">
+            BuildableName = "Memories.app"
+            BlueprintName = "Memories"
+            ReferencedContainer = "container:Memories.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

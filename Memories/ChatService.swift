@@ -1,6 +1,6 @@
 //
 //  ChatService.swift
-//  New Apps Test
+//  Memories
 //
 //  Created by Michel-André Chirita on 11/03/2024.
 //

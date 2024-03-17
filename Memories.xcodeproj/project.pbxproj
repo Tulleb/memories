@@ -7,46 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14374FB22B989FD500131332 /* New_Apps_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB12B989FD500131332 /* New_Apps_TestApp.swift */; };
+		14374FB22B989FD500131332 /* MemoriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB12B989FD500131332 /* MemoriesApp.swift */; };
 		14374FB42B989FD500131332 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB32B989FD500131332 /* ContentView.swift */; };
 		14374FB62B989FD700131332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14374FB52B989FD700131332 /* Assets.xcassets */; };
-		14374FBA2B989FD700131332 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14374FB92B989FD700131332 /* Preview Assets.xcassets */; };
-		14374FC42B989FD700131332 /* New_Apps_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FC32B989FD700131332 /* New_Apps_TestTests.swift */; };
-		14374FCE2B989FD700131332 /* New_Apps_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FCD2B989FD700131332 /* New_Apps_TestUITests.swift */; };
-		14374FD02B989FD700131332 /* New_Apps_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FCF2B989FD700131332 /* New_Apps_TestUITestsLaunchTests.swift */; };
 		14374FDD2B98A02600131332 /* UnsplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FDC2B98A02600131332 /* UnsplashService.swift */; };
 		14E2F7362B9F6385007CCA2C /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2F7352B9F6385007CCA2C /* ChatService.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		14374FC02B989FD700131332 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14374FA62B989FD500131332 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14374FAD2B989FD500131332;
-			remoteInfo = "New Apps Test";
-		};
-		14374FCA2B989FD700131332 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14374FA62B989FD500131332 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14374FAD2B989FD500131332;
-			remoteInfo = "New Apps Test";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		14374FAE2B989FD500131332 /* New Apps Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Apps Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14374FB12B989FD500131332 /* New_Apps_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestApp.swift; sourceTree = "<group>"; };
+		14374FAE2B989FD500131332 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14374FB12B989FD500131332 /* MemoriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesApp.swift; sourceTree = "<group>"; };
 		14374FB32B989FD500131332 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14374FB52B989FD700131332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14374FB72B989FD700131332 /* New_Apps_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = New_Apps_Test.entitlements; sourceTree = "<group>"; };
-		14374FB92B989FD700131332 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		14374FBF2B989FD700131332 /* New Apps TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "New Apps TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14374FC32B989FD700131332 /* New_Apps_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestTests.swift; sourceTree = "<group>"; };
-		14374FC92B989FD700131332 /* New Apps TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "New Apps TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14374FCD2B989FD700131332 /* New_Apps_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestUITests.swift; sourceTree = "<group>"; };
-		14374FCF2B989FD700131332 /* New_Apps_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14374FB72B989FD700131332 /* Memories.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memories.entitlements; sourceTree = "<group>"; };
 		14374FDC2B98A02600131332 /* UnsplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
 		14C4BCC52B98A97F007B818F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		14E2F7352B9F6385007CCA2C /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
@@ -60,20 +33,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14374FBC2B989FD700131332 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14374FC62B989FD700131332 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,9 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				14C4BCC52B98A97F007B818F /* README.md */,
-				14374FB02B989FD500131332 /* New Apps Test */,
-				14374FC22B989FD700131332 /* New Apps TestTests */,
-				14374FCC2B989FD700131332 /* New Apps TestUITests */,
+				14374FB02B989FD500131332 /* Memories */,
 				14374FAF2B989FD500131332 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,58 +48,30 @@
 		14374FAF2B989FD500131332 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14374FAE2B989FD500131332 /* New Apps Test.app */,
-				14374FBF2B989FD700131332 /* New Apps TestTests.xctest */,
-				14374FC92B989FD700131332 /* New Apps TestUITests.xctest */,
+				14374FAE2B989FD500131332 /* Memories.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14374FB02B989FD500131332 /* New Apps Test */ = {
+		14374FB02B989FD500131332 /* Memories */ = {
 			isa = PBXGroup;
 			children = (
-				14374FB12B989FD500131332 /* New_Apps_TestApp.swift */,
+				14374FB12B989FD500131332 /* MemoriesApp.swift */,
 				14374FB32B989FD500131332 /* ContentView.swift */,
 				14374FDC2B98A02600131332 /* UnsplashService.swift */,
 				14E2F7352B9F6385007CCA2C /* ChatService.swift */,
 				14374FB52B989FD700131332 /* Assets.xcassets */,
-				14374FB72B989FD700131332 /* New_Apps_Test.entitlements */,
-				14374FB82B989FD700131332 /* Preview Content */,
+				14374FB72B989FD700131332 /* Memories.entitlements */,
 			);
-			path = "New Apps Test";
-			sourceTree = "<group>";
-		};
-		14374FB82B989FD700131332 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				14374FB92B989FD700131332 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		14374FC22B989FD700131332 /* New Apps TestTests */ = {
-			isa = PBXGroup;
-			children = (
-				14374FC32B989FD700131332 /* New_Apps_TestTests.swift */,
-			);
-			path = "New Apps TestTests";
-			sourceTree = "<group>";
-		};
-		14374FCC2B989FD700131332 /* New Apps TestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				14374FCD2B989FD700131332 /* New_Apps_TestUITests.swift */,
-				14374FCF2B989FD700131332 /* New_Apps_TestUITestsLaunchTests.swift */,
-			);
-			path = "New Apps TestUITests";
+			path = Memories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14374FAD2B989FD500131332 /* New Apps Test */ = {
+		14374FAD2B989FD500131332 /* Memories */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14374FD32B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps Test" */;
+			buildConfigurationList = 14374FD32B989FD700131332 /* Build configuration list for PBXNativeTarget "Memories" */;
 			buildPhases = (
 				14374FAA2B989FD500131332 /* Sources */,
 				14374FAB2B989FD500131332 /* Frameworks */,
@@ -152,46 +81,10 @@
 			);
 			dependencies = (
 			);
-			name = "New Apps Test";
+			name = Memories;
 			productName = "New Apps Test";
-			productReference = 14374FAE2B989FD500131332 /* New Apps Test.app */;
+			productReference = 14374FAE2B989FD500131332 /* Memories.app */;
 			productType = "com.apple.product-type.application";
-		};
-		14374FBE2B989FD700131332 /* New Apps TestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14374FD62B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps TestTests" */;
-			buildPhases = (
-				14374FBB2B989FD700131332 /* Sources */,
-				14374FBC2B989FD700131332 /* Frameworks */,
-				14374FBD2B989FD700131332 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				14374FC12B989FD700131332 /* PBXTargetDependency */,
-			);
-			name = "New Apps TestTests";
-			productName = "New Apps TestTests";
-			productReference = 14374FBF2B989FD700131332 /* New Apps TestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		14374FC82B989FD700131332 /* New Apps TestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14374FD92B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps TestUITests" */;
-			buildPhases = (
-				14374FC52B989FD700131332 /* Sources */,
-				14374FC62B989FD700131332 /* Frameworks */,
-				14374FC72B989FD700131332 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				14374FCB2B989FD700131332 /* PBXTargetDependency */,
-			);
-			name = "New Apps TestUITests";
-			productName = "New Apps TestUITests";
-			productReference = 14374FC92B989FD700131332 /* New Apps TestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -206,17 +99,9 @@
 					14374FAD2B989FD500131332 = {
 						CreatedOnToolsVersion = 15.3;
 					};
-					14374FBE2B989FD700131332 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 14374FAD2B989FD500131332;
-					};
-					14374FC82B989FD700131332 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 14374FAD2B989FD500131332;
-					};
 				};
 			};
-			buildConfigurationList = 14374FA92B989FD500131332 /* Build configuration list for PBXProject "New Apps Test" */;
+			buildConfigurationList = 14374FA92B989FD500131332 /* Build configuration list for PBXProject "Memories" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,9 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14374FAD2B989FD500131332 /* New Apps Test */,
-				14374FBE2B989FD700131332 /* New Apps TestTests */,
-				14374FC82B989FD700131332 /* New Apps TestUITests */,
+				14374FAD2B989FD500131332 /* Memories */,
 			);
 		};
 /* End PBXProject section */
@@ -241,22 +124,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14374FBA2B989FD700131332 /* Preview Assets.xcassets in Resources */,
 				14374FB62B989FD700131332 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14374FBD2B989FD700131332 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14374FC72B989FD700131332 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,42 +137,12 @@
 			files = (
 				14374FB42B989FD500131332 /* ContentView.swift in Sources */,
 				14E2F7362B9F6385007CCA2C /* ChatService.swift in Sources */,
-				14374FB22B989FD500131332 /* New_Apps_TestApp.swift in Sources */,
+				14374FB22B989FD500131332 /* MemoriesApp.swift in Sources */,
 				14374FDD2B98A02600131332 /* UnsplashService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14374FBB2B989FD700131332 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14374FC42B989FD700131332 /* New_Apps_TestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14374FC52B989FD700131332 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14374FCE2B989FD700131332 /* New_Apps_TestUITests.swift in Sources */,
-				14374FD02B989FD700131332 /* New_Apps_TestUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		14374FC12B989FD700131332 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14374FAD2B989FD500131332 /* New Apps Test */;
-			targetProxy = 14374FC02B989FD700131332 /* PBXContainerItemProxy */;
-		};
-		14374FCB2B989FD700131332 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14374FAD2B989FD500131332 /* New Apps Test */;
-			targetProxy = 14374FCA2B989FD700131332 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		14374FD12B989FD700131332 /* Debug */ = {
@@ -426,10 +264,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "New Apps Test/New_Apps_Test.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Memories/Memories.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"New Apps Test/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -447,7 +284,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.voodoo.New-Apps-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.voodoo.Memories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -462,10 +299,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "New Apps Test/New_Apps_Test.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Memories/Memories.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"New Apps Test/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -483,7 +319,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.voodoo.New-Apps-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.voodoo.Memories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -493,96 +329,10 @@
 			};
 			name = Release;
 		};
-		14374FD72B989FD700131332 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.voodoo.New-Apps-TestTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/New Apps Test.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/New Apps Test";
-			};
-			name = Debug;
-		};
-		14374FD82B989FD700131332 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.voodoo.New-Apps-TestTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/New Apps Test.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/New Apps Test";
-			};
-			name = Release;
-		};
-		14374FDA2B989FD700131332 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.voodoo.New-Apps-TestUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "New Apps Test";
-			};
-			name = Debug;
-		};
-		14374FDB2B989FD700131332 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MACOSX_DEPLOYMENT_TARGET = 14.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.voodoo.New-Apps-TestUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "New Apps Test";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14374FA92B989FD500131332 /* Build configuration list for PBXProject "New Apps Test" */ = {
+		14374FA92B989FD500131332 /* Build configuration list for PBXProject "Memories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14374FD12B989FD700131332 /* Debug */,
@@ -591,29 +341,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14374FD32B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps Test" */ = {
+		14374FD32B989FD700131332 /* Build configuration list for PBXNativeTarget "Memories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14374FD42B989FD700131332 /* Debug */,
 				14374FD52B989FD700131332 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		14374FD62B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps TestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14374FD72B989FD700131332 /* Debug */,
-				14374FD82B989FD700131332 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		14374FD92B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps TestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14374FDA2B989FD700131332 /* Debug */,
-				14374FDB2B989FD700131332 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

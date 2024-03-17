@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  New Apps Test
+//  Memories
 //
 //  Created by Michel-André Chirita on 06/03/2024.
 //
