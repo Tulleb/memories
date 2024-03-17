@@ -1,6 +1,24 @@
 # Memories
 
-Share memories with your friends!
+## Share memories with your friends!
+
+Welcome to Memories, an app where you can merge all your memories together and share them with your friends.
+Track back your best memories and exchange with your friends for each one of them.
+
+---
+
+## Feedback
+
+Within the given 4 hours, I chose to mainly focus on code quality, opting for an MVVM + dependency injection architecture. I also wanted to concentrate on some imaginative UX features, such as specific UI components, a parallax effect, and scrolling to reveal pictures. I ended up setting the sharing functionality aside (the Share button does nothing) as I did not have time to implement it. I thought it would be more impactful to focus on other key features. I did not write any unit tests, as they were not a priority, in my opinion, given the timeframe.
+
+If I were given more time to continue working on Memories, I would then:
+- *Sharing*: Develop the Share button feature so you could create a new memory associated to one or more friends.
+- *Chat dependency*: Implement the conversation feature using its own dependency. I could then use Combine (maybe `AsyncThrowingStream`) or a better match than what was first proposed.
+- *Hash tags*: Attach each memory to some hashtags, instead of attaching them to friends. It would allow users to navigate through the app using keywords they like.
+- *Stories*: Add a story feature to transition smoothly from one memory to another.
+- *UI/UX*: Continue improving the existing screens. I would focus on navigation animations so that screens transition not by being pushed from right to left but by zooming into the displayed pictures instead.
+
+I hope you will enjoy checking out Memories as much as I enjoyed developing it.
 
 ---
 
