@@ -41,9 +41,8 @@ private extension MemoriesScreen {
 
 #if DEBUG
 #Preview {
-  @Provider var imagesProvider = UnsplashImageProvider() as ImagesDependency
-  @Provider var databaseProvider = MockDatabaseProvider() as DatabaseDependency
-
-  return MemoriesScreen(friend: User())
+  Preview {
+    MemoriesScreen(friend: User())
+  }
 }
 #endif

@@ -91,8 +91,8 @@ extension User {
 
 #if DEBUG
 #Preview {
-  @Provider var databaseProvider = MockDatabaseProvider() as DatabaseDependency
-
-  return FriendsScreen()
+  Preview {
+    FriendsScreen()
+  }
 }
 #endif

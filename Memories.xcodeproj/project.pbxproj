@@ -23,6 +23,7 @@
 		2E72E32E2BA685A400A6D4CC /* FriendsScreenModel copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E32D2BA685A400A6D4CC /* FriendsScreenModel copy.swift */; };
 		2E72E3312BA68C3400A6D4CC /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E3302BA68C3400A6D4CC /* View+Extensions.swift */; };
 		2E72E3332BA690CD00A6D4CC /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E3322BA690CD00A6D4CC /* Memory.swift */; };
+		2E72E3352BA6928600A6D4CC /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72E3342BA6928600A6D4CC /* Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		2E72E32D2BA685A400A6D4CC /* FriendsScreenModel copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsScreenModel copy.swift"; sourceTree = "<group>"; };
 		2E72E3302BA68C3400A6D4CC /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		2E72E3322BA690CD00A6D4CC /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		2E72E3342BA6928600A6D4CC /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				2E72E3292BA683E400A6D4CC /* LoadableObject.swift */,
 				2E72E32B2BA6843400A6D4CC /* AsyncContentView.swift */,
+				2E72E3342BA6928600A6D4CC /* Preview.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				2E72E31E2BA67B8000A6D4CC /* MemoriesScreenModel.swift in Sources */,
 				14E2F7362B9F6385007CCA2C /* ChatDependency.swift in Sources */,
 				2E72E3232BA67FDD00A6D4CC /* User.swift in Sources */,
+				2E72E3352BA6928600A6D4CC /* Preview.swift in Sources */,
 				2E72E31C2BA67B2D00A6D4CC /* DependencyManager.swift in Sources */,
 				2E72E3272BA682F400A6D4CC /* FriendsScreen.swift in Sources */,
 				14374FB22B989FD500131332 /* MemoriesApp.swift in Sources */,
