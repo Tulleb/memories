@@ -37,9 +37,9 @@ private extension MemoriesScreen {
   var contentView: some View {
     VStack {
       friendView
+        .padding(.horizontal, 16)
       memoriesView
     }
-    .padding()
   }
 
   func destinationView(for destination: MemoriesScreenModel.Destination) -> some View {
@@ -68,11 +68,37 @@ private extension MemoriesScreen {
   }
 
   func memoryView(for memory: Memory) -> some View {
-    Button {
-      model.didTapMemory(memory)
-    } label: {
-      AsyncImage(url: memory.imageURL)
+    GeometryReader { geometry in
+      Button {
+        model.didTapMemory(memory)
+      } label: {
+        AsyncImage(url: memory.imageURL)
+      }
+        Button(
+          action: {
+            model.didTapMemory(memory)
+          }) {
+            AsyncImage(url: memory.imageURL) { image in
+              image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .offset(y: getOffset(geometry: geometry))
+                .clipped()
+            } placeholder: {
+              ProgressView()
+            }
+          }
+//          .buttonStyle(PlainButtonStyle())
     }
+    .frame(height: 200) // Fixed height for each image container
+  }
+
+  func getOffset(geometry: GeometryProxy) -> CGFloat {
+    let offset = geometry.frame(in: .global).minY
+    let height = geometry.size.height
+    let speed = 20.0
+    let parallax = -offset / height * speed
+    return parallax
   }
 }
 

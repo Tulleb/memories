@@ -77,7 +77,7 @@ private extension ConversationScreen {
     AsyncImage(url: model.memory.imageURL) { image in
       image
         .resizable()
-        .scaledToFit()
+        .scaledToFill()
         .overlay(
           .thinMaterial
             .opacity(backgroundBlurringOpacity)
