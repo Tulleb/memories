@@ -11,14 +11,16 @@ struct FriendsScreen: View {
   @StateObject private var model = FriendsScreenModel()
 
   var body: some View {
-    AsyncContentView(
-      source: model,
-      contentView: contentView
-    )
-    .navigationDestination(
-      item: $model.destination,
-      destination: destinationView
-    )
+    NavigationStack {
+      AsyncContentView(
+        source: model,
+        contentView: contentView
+      )
+      .navigationDestination(
+        item: $model.destination,
+        destination: destinationView
+      )
+    }
   }
 }
 
@@ -26,18 +28,16 @@ struct FriendsScreen: View {
 
 private extension FriendsScreen {
   func contentView(for currentUser: CurrentUser) -> some View {
-    NavigationStack {
-      VStack(alignment: .leading) {
-        welcomeText(for: currentUser)
-        friendsView(for: currentUser)
-      }
+    VStack(alignment: .leading) {
+      welcomeText(for: currentUser)
+      friendsView(for: currentUser)
     }
   }
 
   func destinationView(for destination: FriendsScreenModel.Destination) -> some View {
     switch destination {
-    case .memories(let user):
-      EmptyView()
+    case .memories(let friend):
+      MemoriesScreen(friend: friend)
     }
   }
 

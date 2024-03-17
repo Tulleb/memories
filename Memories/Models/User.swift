@@ -8,7 +8,7 @@
 import Foundation
 
 struct User: Equatable, Identifiable, Hashable {
-  let id: String
+  let id: UUID
   let firstName: String
   let lastName: String
 }
@@ -59,7 +59,7 @@ extension User {
   ]
 
   init() {
-    self.id = UUID().uuidString
+    self.id = UUID()
     self.firstName = Self.randomNames.randomElement()!
     self.lastName = Self.randomNames.randomElement()!
   }
