@@ -20,6 +20,16 @@ struct FriendsScreen: View {
         item: $model.destination,
         destination: destinationView
       )
+      .toolbar {
+        ToolbarItem(placement: .topBarLeading) {
+          HStack {
+            Image(.logo)
+              .resizable()
+              .frame(size: 40)
+            Text("Memories")
+          }
+        }
+      }
     }
   }
 }
